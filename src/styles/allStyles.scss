@@ -1,0 +1,243 @@
+body {
+  background-color: rgb(212, 212, 212);
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+
+  .searchbarPopup {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top: 0;
+  }
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  .logo {
+    margin: 0 auto 0 0;
+    cursor: pointer;
+  }
+
+  .navLink {
+    text-decoration: none;
+    text-align: center;
+    width: 5em;
+    height: 1.5em;
+    // color: black;
+    // border-bottom: 3px solid purple;
+    // border
+    margin: 0 1em 0 1em;
+    // background-color: green;
+  }
+
+  .fas.fa-search {
+    font-size: 1.5em;
+    text-align: center;
+    padding: 1em;
+    // background-color: red;
+    cursor: pointer;
+  }
+}
+
+.Home {
+  display: flex;
+  justify-content: center;
+
+  .HomepageImage {
+    max-width: 100vw;
+  }
+}
+
+.Agents {
+  display: flex;
+  flex-direction: row;
+
+  .Agent {
+    display: flex;
+
+    .agentNameWithImage {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0 1em 0 0;
+
+      .AgentName {
+        font-size: 1.5em;
+      }
+
+      .AgentImage {
+        width: 40vh;
+        // filter: drop-shadow(10px 10px 0 rgb(255, 0, 0));
+        // filter: drop-shadow(10px 10px 0 rgb(255, 0, 0));
+        //Adds dropshadow
+      }
+    }
+
+    .agentAbilities {
+      display: flex;
+      flex-direction: column;
+      // align-items: center;
+      justify-content: space-around;
+      .agentAbility {
+        padding: 0.5em;
+        border: 1px solid rgb(0, 0, 0);
+        // background-color: red;
+        // border: 0.1em solid rgb(0, 0, 0);
+
+        .agentAbilityName {
+        }
+        .agentAbilityDesc {
+          font-size: 0.7em;
+        }
+        .agentAbilityCost {
+          // font-weight: bold;
+        }
+      }
+    }
+  }
+}
+
+.Weapons {
+  display: flex;
+  // justify-content: space-around;
+
+  .Weapon {
+    display: flex;
+    flex-direction: column;
+
+    .weaponNameWithImage {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0 1em 0 0;
+
+      .weaponName {
+        font-size: 1.5em;
+      }
+
+      .weaponImage {
+        width: 80vh;
+        // filter: drop-shadow(0 5px 0 rgba(0, 0, 0, 0.2));
+        // filter: drop-shadow(0 5px 0 rgba(0, 0, 0, 0.2));
+        //Adds dropshadow
+      }
+    }
+    .weaponStats {
+      display: flex;
+      flex-direction: column;
+      align-self: center;
+      // align-items: flex-end;
+      // margin: 0 0 0 5em;
+      width: 30em;
+      justify-content: center;
+
+      .weaponStat {
+        border: 1px solid rgb(0, 0, 0);
+        margin: 0;
+        padding: 1em;
+      }
+
+      .weaponStatDamge {
+        display: flex;
+        flex-direction: row;
+        border: 1px solid rgb(0, 0, 0);
+        padding: 1em;
+        // justify-content: space-between;
+
+        .weaponStatDamgeContent {
+          display: flex;
+          flex-direction: column;
+          margin: 0 0 0 1em;
+
+          .rangeContentHolder {
+            border: 1px solid rgb(0, 0, 0);
+            padding: 1em;
+
+            .rangeTitle {
+              margin: 0;
+            }
+            .rangeContent {
+              margin: 0;
+            }
+          }
+          .positionContentHolder {
+            display: flex;
+            border: 1px solid rgb(0, 0, 0);
+            padding: 1em;
+
+            .positionTitle {
+              // text-decoration: none;
+              margin: 0;
+            }
+            .positionContent {
+              margin: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.Guides {
+  display: flex;
+  justify-content: space-around;
+
+  .Guide {
+    display: flex;
+    flex-direction: column;
+
+    .guideNameWithImage {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0 1em 0 0;
+
+      .guideName {
+        font-size: 1.5em;
+      }
+
+      .guideImage {
+        width: 15vh;
+      }
+    }
+    .guideContent {
+    }
+  }
+}
+
+.GeneralSidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  // justify-content: center;
+  // align-items: center;
+  // justify-content: center;
+  // margin: 0 auto 0 auto;
+  // margin: 0 0 0 20em;
+
+  Link {
+    margin: 0 1em 0 0;
+  }
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+}
