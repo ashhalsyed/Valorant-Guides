@@ -59,7 +59,6 @@ function App() {
 
     return (
         <div className="App">
-            <p>BAKA</p>
             {/* {searchbarOverlay} */}
             <nav>
                 <Link to="/" className="logo">
