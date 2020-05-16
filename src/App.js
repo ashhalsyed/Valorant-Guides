@@ -1,74 +1,72 @@
-import React from "react";
+import React, { useState } from "react";
 import { Route, Link, useLocation } from "react-router-dom";
 import "./styles/allStyles.scss";
-import logo from "./assets/logo.png";
+import valorantGuidesLogo from "./assets/valorantGuidesLogo.svg";
 import Home from "./contentpages/home";
 import Agents from "./contentpages/agents";
 import Weapons from "./contentpages/weapons";
 import Guides from "./contentpages/guides";
+import SearchPopup from './searchPopup'
+
+import agentsIcon from './assets/agentsIcon.svg'
+import weaponsIcon from './assets/weaponsIcon.svg'
+import guidesIcon from './assets/guidesIcon.svg'
 
 function App() {
-    // const allAgents = [
-    //   {
-    //       name: "timmy",
-    //       image: timmy,
-    //   },
-    //   {
-    //       name: "bud",
-    //       image: bud,
-    //   },
-    // ];
 
-    // const [agent, changeAgent] = React.useState(allAgents[0]);
+    const [searchOpen, toggleSearchPopup] = useState(false);
 
-    // const agentsComponent = <Agents allAgents={allAgents} agent={agent} changeAgent={changeAgent()} />
-    let agentsUnderlined;
-    let weaponsUnderlined;
-    let guidesUnderlined;
+    function openSearchPopup() {
+        toggleSearchPopup(true)
+    }
+
+    function closeSearchPopup() {
+        toggleSearchPopup(false)
+    }
+
+    let agentsSelected;
+    let weaponsSelected;
+    let guidesSelected;
 
     const currentLocation = useLocation().pathname.split("/")[1];
 
     if (currentLocation === "Agents") {
-        agentsUnderlined = { borderBottom: "3px solid purple" };
+        agentsSelected = { backgroundColor: "#29ABE2" };
     } else {
-        agentsUnderlined = undefined;
+        agentsSelected = undefined;
     }
 
     if (currentLocation === "Weapons") {
-        weaponsUnderlined = { borderBottom: "3px solid purple" };
+        weaponsSelected = { backgroundColor: "#FF6633" };
     } else {
-        weaponsUnderlined = undefined;
+        weaponsSelected = undefined;
     }
     if (currentLocation === "Guides") {
-        guidesUnderlined = { borderBottom: "3px solid purple" };
+        guidesSelected = { backgroundColor: "#33FF33" };
     } else {
-        guidesUnderlined = undefined;
+        guidesSelected = undefined;
     }
-
-    // var searchbarOverlay = <div className='searchbarPopup' style={{ visibility: 'hidden' }}></div>
-
-    // function openSearchPopup() {
-    //     console.log('open')
-    //     searchbarOverlay = <div onClick={closeSearchPopup} className='searchbarPopup' style={{ visibility: 'hidden' }}></div>
-    // }
-
-    // function closeSearchPopup() {
-    //     console.log('closed')
-    //     searchbarOverlay = <div className='searchbarPopup' style={{ visibility: 'hidden' }}></div>
-    // }
 
     return (
         <div className="App">
-            {/* {searchbarOverlay} */}
+            <SearchPopup searchOpen={searchOpen} closeSearchPopup={closeSearchPopup} />
             <nav>
-                <Link to="/" className="logo">
-                    <img src={logo} alt="valorant guides logo" />
+                <Link to="/" className="navLink logo">
+                    <img className='valorantGuidesLogo' src={valorantGuidesLogo} alt="valorant guides logo" />
                 </Link>
-                <Link to="/Agents" className="navLink" style={agentsUnderlined}>&nbsp;Agents</Link>
-                <Link to="/Weapons" className="navLink" style={weaponsUnderlined}>&nbsp;Weapons</Link>
-                <Link to="/Guides" className="navLink" style={guidesUnderlined}>&nbsp;Guides</Link>
-                <i onClick={() => { alert('dont click me') }} className="fas fa-search"></i>
-                {/* <i onClick={openSearchPopup} className="fas fa-search"></i> */}
+                <Link to="/Agents" className="navLink agents" style={agentsSelected}>
+                    <img className='agentsIcon' src={agentsIcon} alt='agentsIcon' />
+                    <p className='navbarText'>Agents</p>
+                </Link>
+                <Link to="/Weapons" className="navLink weapons" style={weaponsSelected}>
+                    <img className='weaponsIcon' src={weaponsIcon} alt='weaponsIcon' />
+                    <p className='navbarText'>Weapons</p>
+                </Link>
+                <Link to="/Guides" className="navLink guides" style={guidesSelected}>
+                    <img className='guidesIcon' src={guidesIcon} alt='guidesIcon' />
+                    <p className='navbarText'>Guides</p>
+                </Link>
+                <i onClick={openSearchPopup} className="fas fa-search"></i>
             </nav>
 
             <Route exact path="/" component={Home} />
@@ -76,8 +74,8 @@ function App() {
             <Route path="/Weapons" component={Weapons} />
             <Route path="/Guides" component={Guides} />
             <footer>
-                <p>
-                    © 2020 Valorant Guides <br /> Not affiliated with Riot Games
+                <p className='footerText'>
+                    © 2020 Valorant Guides | Not affiliated with Riot Games
                 </p>
             </footer>
         </div>

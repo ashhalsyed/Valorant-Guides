@@ -5,7 +5,8 @@ import { allAgents, allWeapons, allGuides } from './allData'
 
 function GeneralSidebar() {
 
-    const currentPageType = useLocation().pathname.split('/')[1]
+    const currentURL = useLocation().pathname.split('/')
+    const currentPageType = currentURL[1]
 
     var allTypes
     var typeContent
@@ -19,13 +20,28 @@ function GeneralSidebar() {
 
         typeContent = []
         allTypes.forEach((type) => {
-            typeContent.push(
-                <p key={type}>{type}</p>
-            )
+            // typeContent.push(
+            //     <p key={type}>{type}</p>
+            // )
+            //Adds titles in Sidebar
             allAgents.forEach((agent) => {
+                var currentAgent = currentURL[2]
+
+                var selectedAgent = false;
+                if (currentAgent === undefined && agent.name === 'Brimstone') {
+                    selectedAgent = true
+                }
+                else if (currentAgent === agent.name) {
+                    selectedAgent = true
+                }
+
+                selectedAgent = selectedAgent ? { outline: '5px solid rgb(255,0,0)', zIndex: '2' } : { outline: '2px solid rgb(0,0,0)' }
+
                 if (agent.type === type) {
                     typeContent.push(
-                        <Link key={agent.name} to={'/Agents/' + agent.name}>{agent.name}</Link >
+                        <Link style={selectedAgent} key={agent.name} to={'/Agents/' + agent.name}>
+                            <img className='agentImageSidebar' src={agent.imageSmall} alt='agent preview in sidebar' />
+                        </Link >
                     )
                 }
             })
@@ -33,6 +49,7 @@ function GeneralSidebar() {
     } else if (currentPageType === 'Weapons') {
         allTypes = []
         allWeapons.forEach((weapon) => {
+
             if (allTypes.indexOf(weapon.type) === -1) {
                 allTypes.push(weapon.type)
             }
@@ -40,13 +57,26 @@ function GeneralSidebar() {
 
         typeContent = []
         allTypes.forEach((type) => {
-            typeContent.push(
-                <p key={type}>{type}</p>
-            )
+            // typeContent.push(
+            //     <p className='generalSidebarWeaponText' key={type}>{type}</p>
+            // )
             allWeapons.forEach((weapon) => {
+                var currentWeapon = currentURL[2]
+
+                var selectedWeapon = false;
+                if (currentWeapon === undefined && weapon.name === 'Classic') {
+                    selectedWeapon = true
+                }
+                else if (currentWeapon === weapon.name) {
+                    selectedWeapon = true
+                }
+
+                selectedWeapon = selectedWeapon ? { outline: '5px solid rgb(255,0,0)', zIndex: '2' } : { outline: '2px solid rgb(0,0,0)' }
                 if (weapon.type === type) {
                     typeContent.push(
-                        <Link key={weapon.name} to={'/Weapons/' + weapon.name}>{weapon.name}</Link >
+                        <Link style={selectedWeapon} key={weapon.name} to={'/Weapons/' + weapon.name}>
+                            <img className='weaponImageSidebar' src={weapon.image} alt='weapon preview in sidebar' />
+                        </Link >
                     )
                 }
             })
@@ -69,7 +99,7 @@ function GeneralSidebar() {
         typeContent = []
         allTypes.forEach((type) => {
             typeContent.push(
-                <p key={type}>{type}</p>
+                <p className='GuideLink' key={type}>{type}</p>
             )
             allGuides.forEach((guide) => {
                 let questionMark = ''
@@ -100,7 +130,7 @@ function GeneralSidebar() {
 
 
     return (
-        <div className='GeneralSidebar'>
+        <div className={'GeneralSidebar ' + currentPageType}>
             {typeContent}
         </div>
     );

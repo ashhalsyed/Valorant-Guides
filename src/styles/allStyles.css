@@ -1,5 +1,4 @@
 body {
-  background-color: #d4d4d4;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -7,6 +6,7 @@ body {
 }
 
 .App {
+  font-family: "Exo 2";
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -14,9 +14,6 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   height: 100vh;
 }
 
@@ -28,22 +25,91 @@ nav {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-nav .logo {
-  margin: 0 auto 0 0;
-  cursor: pointer;
+  max-height: 10vh;
 }
 
 nav .navLink {
+  font-weight: bold;
   text-decoration: none;
   text-align: center;
-  width: 5em;
-  height: 1.5em;
-  margin: 0 1em 0 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 10px 10px 0 0;
+}
+
+nav .navLink .valorantGuidesLogo {
+  width: 70px;
+  cursor: pointer;
+}
+
+nav .navLink .navbarText {
+  font-size: 1em;
+  color: black;
+  margin: 0.5em 0 0.5em 0;
+}
+
+nav .navLink .agentsIcon {
+  width: 3em;
+}
+
+nav .navLink .weaponsIcon {
+  width: 2em;
+}
+
+nav .navLink .guidesIcon {
+  width: 3em;
+}
+
+nav .fas.fa-search {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  font-size: 2em;
+  text-align: center;
+  line-height: 3em;
+  width: 3em;
+  height: 3em;
+  cursor: pointer;
+}
+
+nav .navLink.logo {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  margin: 1em 0 0 1em;
+}
+
+nav .navLink.agents {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  margin: 1em 0 0 auto;
+  width: 6em;
+  height: 6em;
+}
+
+nav .navLink.weapons {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  width: 6em;
+  height: 6em;
+  margin: 1em 0 0 0;
+}
+
+nav .navLink.guides {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  width: 6em;
+  height: 6em;
+  margin: 1em 0 0 0;
 }
 
 .Home {
@@ -53,10 +119,18 @@ nav .navLink {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 80vh;
 }
 
 .Home .HomepageImage {
-  max-width: 100vw;
+  width: 100%;
+}
+
+.creditsIcon {
+  width: 1em;
 }
 
 .Agents {
@@ -67,8 +141,12 @@ nav .navLink {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  background-color: #29abe2;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 80vh;
+  padding: 1em;
 }
 
 .Agents .Agent {
@@ -88,18 +166,17 @@ nav .navLink {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 0 1em 0 0;
 }
 
 .Agents .Agent .agentNameWithImage .AgentName {
-  font-size: 1.5em;
+  font-size: 4em;
 }
 
 .Agents .Agent .agentNameWithImage .AgentImage {
-  width: 15vh;
+  width: 40vh;
 }
 
-.Agents .Agent .agentAbilities {
+.Agents .Agent .allAgentAbilityContent {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -107,35 +184,121 @@ nav .navLink {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  background-color: rgba(255, 255, 255, 0.15);
+  padding: 1em;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 0px 50px 10px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 0px 50px 10px rgba(0, 0, 0, 0.15);
+  width: 30em;
 }
 
-.Agents .Agent .agentAbilities .agentAbility {
+.Agents .Agent .allAgentAbilityContent .AbilitiesTitle {
+  font-size: 3em;
+  margin: 0;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.Agents .Agent .allAgentAbilityContent .agentAbilities {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: 10em;
+}
+
+.Agents .Agent .allAgentAbilityContent .agentAbilities .agentAbilityIcons {
+  width: 7em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 0.5em;
-  border: 0.1em solid black;
+  text-decoration: none;
 }
 
-.Agents .Agent .agentAbilities .agentAbility .agentAbilityDesc {
+.Agents .Agent .allAgentAbilityContent .agentAbilities .agentAbilityIcons .agentAbilityImage {
+  width: 3em;
+  height: 3em;
+  padding: 1em;
+  border-radius: 1em;
+  background-color: white;
+}
+
+.Agents .Agent .allAgentAbilityContent .agentAbilities .agentAbilityIcons .abilityContentCharges {
+  width: 5em;
+  margin: 0.5em 0 0 0;
+}
+
+.Agents .Agent .allAgentAbilityContent .agentAbilities .agentAbilityIcons .agentAbilityNamePreview {
+  font-size: 1em;
+  margin: 0.5em 0 0 0;
+  text-align: center;
+  color: black;
+}
+
+.Agents .Agent .allAgentAbilityContent .agentAbilities .agentAbilityIcons .agentAbilityName {
+  font-size: 1em;
+}
+
+.Agents .Agent .allAgentAbilityContent .agentAbilities .agentAbilityIcons .agentAbilityDesc {
   font-size: 0.7em;
 }
 
-.Agents .Agent .agentAbilities .agentAbility .agentAbilityCost {
-  font-weight: bold;
+.Agents .Agent .allAgentAbilityContent .agentAbilities .agentAbilityIcons .agentAbilityCost {
+  font-size: 1em;
+}
+
+.Agents .Agent .allAgentAbilityContent .agentAbilityContent .abilityContentName {
+  font-size: 3em;
+  margin: 0;
+}
+
+.Agents .Agent .allAgentAbilityContent .agentAbilityContent .abilityContentDescription {
+  font-size: 1em;
+}
+
+.Agents .Agent .allAgentAbilityContent .agentAbilityContent .abilityContentCost {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Agents .Agent .allAgentAbilityContent .agentAbilityContent .abilityContentCost .abilityContentCostText {
+  font-size: 2em;
+  margin: 0 0 0 0.5em;
 }
 
 .Weapons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  background-color: #ff6633;
+  height: 80vh;
+  padding: 1em;
 }
 
 .Weapons .Weapon {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .Weapons .Weapon .weaponNameWithImage {
@@ -152,12 +315,14 @@ nav .navLink {
   margin: 0 1em 0 0;
 }
 
-.Weapons .Weapon .weaponNameWithImage .WeaponName {
-  font-size: 1.5em;
+.Weapons .Weapon .weaponNameWithImage .weaponName {
+  font-size: 4em;
+  margin: 0;
 }
 
 .Weapons .Weapon .weaponNameWithImage .weaponImage {
-  width: 15vh;
+  width: 80vh;
+  margin: 0 0 1em 0;
 }
 
 .Weapons .Weapon .weaponStats {
@@ -168,17 +333,136 @@ nav .navLink {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+  background-color: rgba(255, 255, 255, 0.15);
+  -webkit-box-shadow: 0px 0px 50px 10px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 0px 50px 10px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  padding: 1em;
+  width: 30em;
+  height: 30em;
+}
+
+.Weapons .Weapon .weaponStats .weaponStat {
+  margin: 0;
+  padding: 0.5em;
+}
+
+.Weapons .Weapon .weaponStats .weaponStat.cost {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.Weapons .Weapon .weaponStats .weaponStat.cost .weaponStatCost {
+  font-size: 1em;
+  margin: 0 1em 0 0;
+}
+
+.Weapons .Weapon .weaponStats .weaponStat.cost .weaponStatCostContent {
+  font-size: 1em;
+  margin: 0 0 0 0.5em;
+}
+
+.Weapons .Weapon .weaponStats .weaponStatDamge {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 0.5em;
+}
+
+.Weapons .Weapon .weaponStats .weaponStatDamge .weaponStatDamgeContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0 0 0 1em;
+}
+
+.Weapons .Weapon .weaponStats .weaponStatDamge .weaponStatDamgeContent .rangeContentHolder {
+  border: 1px solid black;
+  padding: 0.5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Weapons .Weapon .weaponStats .weaponStatDamge .weaponStatDamgeContent .rangeContentHolder .rangeTitle {
+  margin: 0;
+}
+
+.Weapons .Weapon .weaponStats .weaponStatDamge .weaponStatDamgeContent .rangeContentHolder .rangeContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
+}
+
+.Weapons .Weapon .weaponStats .weaponStatDamge .weaponStatDamgeContent .rangeContentHolder .rangeContent .bodydamageIcon {
+  width: 2em;
+  margin: 0 0.5em 0 1em;
+}
+
+.Weapons .Weapon .weaponStats .weaponStatDamge .weaponStatDamgeContent .rangeContentHolder .rangeContent .headdamageIcon {
+  width: 1em;
+  margin: 0 0.5em 0 1em;
+}
+
+.Weapons .Weapon .weaponStats .weaponStatDamge .weaponStatDamgeContent .rangeContentHolder .rangeContent .legsdamageIcon {
+  width: 1em;
+  margin: 0 0.5em 0 1em;
+}
+
+.Weapons .Weapon .weaponStats .weaponStatDamge .weaponStatDamgeContent .positionContentHolder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px solid black;
+  padding: 0.5em;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Weapons .Weapon .weaponStats .weaponStatDamge .weaponStatDamgeContent .positionContentHolder .positionTitle {
+  margin: 0;
+}
+
+.Weapons .Weapon .weaponStats .weaponStatDamge .weaponStatDamgeContent .positionContentHolder .knifeFrontIcon {
+  width: 2em;
+  margin: 0 0.5em 0 1em;
+}
+
+.Weapons .Weapon .weaponStats .weaponStatDamge .weaponStatDamgeContent .positionContentHolder .knifeBackIcon {
+  width: 2em;
+  margin: 0 0.5em 0 1em;
+}
+
+.Weapons .Weapon .weaponStats .weaponStatDamge .weaponStatDamgeContent .positionContentHolder .positionContent {
+  margin: 0;
 }
 
 .Guides {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #33ff33;
+  height: 80vh;
+  padding: 1em;
 }
 
 .Guides .Guide {
@@ -210,16 +494,33 @@ nav .navLink {
 }
 
 .Guides .Guide .guideNameWithImage .guideImage {
-  width: 15vh;
+  width: 30vh;
 }
 
 .GeneralSidebar {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background-color: rgba(255, 255, 255, 0.15);
+  -webkit-box-shadow: 0px 0px 50px 10px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 0px 50px 10px rgba(0, 0, 0, 0.15);
+  padding: 1em;
+  border-radius: 10px;
+}
+
+.GeneralSidebar .agentImageSidebar {
+  width: 4.5em;
+}
+
+.GeneralSidebar .weaponImageSidebar {
+  width: 6.5em;
 }
 
 .GeneralSidebar Link {
@@ -233,5 +534,9 @@ footer {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  height: 10vh;
 }
 /*# sourceMappingURL=allStyles.css.map */
