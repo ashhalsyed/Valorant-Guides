@@ -496,7 +496,7 @@ export const allWeapons = [
         },
         wallPenetration: 'Low',
         cost: '200',
-        CsgoEquivalent: 'Unsure'
+        CsgoEquivalent: 'None'
     },
     {
         type: 'Pistol',
@@ -564,7 +564,7 @@ export const allWeapons = [
         },
         wallPenetration: 'Low',
         cost: '1000',
-        CsgoEquivalent: 'Unsure'
+        CsgoEquivalent: 'Mac-10'
     },
     {
         type: 'SMG',
@@ -581,7 +581,7 @@ export const allWeapons = [
         },
         wallPenetration: 'Medium',
         cost: '1600',
-        CsgoEquivalent: 'Unsure'
+        CsgoEquivalent: 'MP5'
     },
     {
         type: 'Shotgun',
@@ -599,7 +599,7 @@ export const allWeapons = [
         },
         wallPenetration: 'Low',
         cost: '900',
-        CsgoEquivalent: 'Unsure'
+        CsgoEquivalent: 'None'
     },
     {
         type: 'Shotgun',
@@ -617,7 +617,7 @@ export const allWeapons = [
         },
         wallPenetration: 'Medium',
         cost: '1500',
-        CsgoEquivalent: 'Unsure'
+        CsgoEquivalent: 'XM1014'
     },
     {
         type: 'Rifle',
@@ -633,7 +633,7 @@ export const allWeapons = [
         },
         wallPenetration: 'Medium',
         cost: '2100',
-        CsgoEquivalent: 'Unsure'
+        CsgoEquivalent: 'Famas'
     },
     {
         type: 'Rifle',
@@ -649,7 +649,7 @@ export const allWeapons = [
         },
         wallPenetration: 'Medium',
         cost: '2700',
-        CsgoEquivalent: 'Unsure'
+        CsgoEquivalent: 'None'
     },
     {
         type: 'Rifle',
@@ -667,7 +667,7 @@ export const allWeapons = [
         },
         wallPenetration: 'Medium',
         cost: '2900',
-        CsgoEquivalent: 'Unsure'
+        CsgoEquivalent: 'M4A1'
     },
     {
         type: 'Rifle',
@@ -683,7 +683,7 @@ export const allWeapons = [
         },
         wallPenetration: 'Medium',
         cost: '2900',
-        CsgoEquivalent: 'Unsure'
+        CsgoEquivalent: 'AK-47'
     },
     {
         type: 'Sniper',
@@ -699,7 +699,7 @@ export const allWeapons = [
         },
         wallPenetration: 'Medium',
         cost: '1100',
-        CsgoEquivalent: 'Unsure'
+        CsgoEquivalent: 'SSG 08'
     },
     {
         type: 'Sniper',
@@ -715,7 +715,7 @@ export const allWeapons = [
         },
         wallPenetration: 'High',
         cost: '4500',
-        CsgoEquivalent: 'Unsure'
+        CsgoEquivalent: 'AWP'
     },
     {
         type: 'Heavy',
@@ -732,7 +732,7 @@ export const allWeapons = [
         },
         wallPenetration: 'High',
         cost: '1700',
-        CsgoEquivalent: 'Unsure'
+        CsgoEquivalent: 'Negev'
     },
     {
         type: 'Heavy',
@@ -749,7 +749,7 @@ export const allWeapons = [
         },
         wallPenetration: 'High',
         cost: '3200',
-        CsgoEquivalent: 'Unsure'
+        CsgoEquivalent: 'M249'
     },
     {
         type: 'Armor',
@@ -817,7 +817,7 @@ export const allGuides = [
         type: 'FAQ',
         name: "Can You BHOP and Air Strafe in this game",
         image: '',
-        content: 'Yes you can. Never ask a question this dumb again.',
+        content: 'Yes you can',
         question: true
     },
 ];

@@ -5,538 +5,2131 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.App {
-  font-family: "Exo 2";
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  height: 100vh;
-}
-
-nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  max-height: 10vh;
-}
-
-nav .navLink {
-  font-weight: bold;
-  text-decoration: none;
-  text-align: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  border-radius: 10px 10px 0 0;
-}
-
-nav .navLink .valorantGuidesLogo {
-  width: 70px;
-  cursor: pointer;
-}
-
-nav .navLink .navbarText {
-  font-size: 1em;
-  color: black;
-  margin: 0.5em 0 0.5em 0;
-}
-
-nav .navLink .agentsIcon {
-  width: 3em;
-}
-
-nav .navLink .weaponsIcon {
-  width: 2em;
-}
-
-nav .navLink .guidesIcon {
-  width: 3em;
-}
-
-nav .fas.fa-search {
-  -ms-flex-item-align: end;
-      align-self: flex-end;
-  font-size: 2em;
-  text-align: center;
-  line-height: 3em;
-  width: 3em;
-  height: 3em;
-  cursor: pointer;
-}
-
-nav .navLink.logo {
-  -ms-flex-item-align: start;
-      align-self: flex-start;
-  margin: 1em 0 0 1em;
-}
-
-nav .navLink.agents {
-  -ms-flex-item-align: end;
-      align-self: flex-end;
-  margin: 1em 0 0 auto;
-  width: 6em;
-  height: 6em;
-}
-
-nav .navLink.weapons {
-  -ms-flex-item-align: end;
-      align-self: flex-end;
-  width: 6em;
-  height: 6em;
-  margin: 1em 0 0 0;
-}
-
-nav .navLink.guides {
-  -ms-flex-item-align: end;
-      align-self: flex-end;
-  width: 6em;
-  height: 6em;
-  margin: 1em 0 0 0;
-}
-
-.Home {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 80vh;
-}
-
-.Home .HomepageImage {
-  width: 100%;
-}
-
-.creditsIcon {
-  width: 1em;
-}
-
-.Agents {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  background-color: #29abe2;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  height: 80vh;
-  padding: 1em;
-}
-
-.Agents .Agent {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.Agents .Agent .agentNameWithImage {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.Agents .Agent .agentNameWithImage .AgentName {
-  font-size: 4em;
-}
-
-.Agents .Agent .agentNameWithImage .AgentImage {
-  width: 40vh;
-}
-
-.Agents .Agent .allAgentAbilityContent {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  background-color: rgba(255, 255, 255, 0.15);
-  padding: 1em;
-  border-radius: 10px;
-  -webkit-box-shadow: 0px 0px 50px 10px rgba(0, 0, 0, 0.15);
-          box-shadow: 0px 0px 50px 10px rgba(0, 0, 0, 0.15);
-  width: 30em;
-}
-
-.Agents .Agent .allAgentAbilityContent .AbilitiesTitle {
-  font-size: 3em;
-  margin: 0;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-}
-
-.Agents .Agent .allAgentAbilityContent .agentAbilities {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  height: 10em;
-}
-
-.Agents .Agent .allAgentAbilityContent .agentAbilities .agentAbilityIcons {
-  width: 7em;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 0.5em;
-  text-decoration: none;
-}
-
-.Agents .Agent .allAgentAbilityContent .agentAbilities .agentAbilityIcons .agentAbilityImage {
-  width: 3em;
-  height: 3em;
-  padding: 1em;
-  border-radius: 1em;
-  background-color: white;
-}
-
-.Agents .Agent .allAgentAbilityContent .agentAbilities .agentAbilityIcons .abilityContentCharges {
-  width: 5em;
-  margin: 0.5em 0 0 0;
-}
-
-.Agents .Agent .allAgentAbilityContent .agentAbilities .agentAbilityIcons .agentAbilityNamePreview {
-  font-size: 1em;
-  margin: 0.5em 0 0 0;
-  text-align: center;
-  color: black;
-}
-
-.Agents .Agent .allAgentAbilityContent .agentAbilities .agentAbilityIcons .agentAbilityName {
-  font-size: 1em;
-}
-
-.Agents .Agent .allAgentAbilityContent .agentAbilities .agentAbilityIcons .agentAbilityDesc {
-  font-size: 0.7em;
-}
-
-.Agents .Agent .allAgentAbilityContent .agentAbilities .agentAbilityIcons .agentAbilityCost {
-  font-size: 1em;
-}
-
-.Agents .Agent .allAgentAbilityContent .agentAbilityContent .abilityContentName {
-  font-size: 3em;
-  margin: 0;
-}
-
-.Agents .Agent .allAgentAbilityContent .agentAbilityContent .abilityContentDescription {
-  font-size: 1em;
-}
-
-.Agents .Agent .allAgentAbilityContent .agentAbilityContent .abilityContentCost {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.Agents .Agent .allAgentAbilityContent .agentAbilityContent .abilityContentCost .abilityContentCostText {
-  font-size: 2em;
-  margin: 0 0 0 0.5em;
-}
-
-.Weapons {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  background-color: #ff6633;
-  height: 80vh;
-  padding: 1em;
-}
-
-.Weapons .Weapon {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.Weapons .Weapon .weaponNameWithImage {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin: 0 1em 0 0;
-}
-
-.Weapons .Weapon .weaponNameWithImage .weaponName {
-  font-size: 4em;
-  margin: 0;
-}
-
-.Weapons .Weapon .weaponNameWithImage .weaponImage {
-  width: 80vh;
-  margin: 0 0 1em 0;
-}
-
-.Weapons .Weapon .weaponStats {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-item-align: center;
-      align-self: center;
-  background-color: rgba(255, 255, 255, 0.15);
-  -webkit-box-shadow: 0px 0px 50px 10px rgba(0, 0, 0, 0.15);
-          box-shadow: 0px 0px 50px 10px rgba(0, 0, 0, 0.15);
-  border-radius: 10px;
-  padding: 1em;
-  width: 30em;
-  height: 30em;
-}
-
-.Weapons .Weapon .weaponStats .weaponStat {
-  margin: 0;
-  padding: 0.5em;
-}
-
-.Weapons .Weapon .weaponStats .weaponStat.cost {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.Weapons .Weapon .weaponStats .weaponStat.cost .weaponStatCost {
-  font-size: 1em;
-  margin: 0 1em 0 0;
-}
-
-.Weapons .Weapon .weaponStats .weaponStat.cost .weaponStatCostContent {
-  font-size: 1em;
-  margin: 0 0 0 0.5em;
-}
-
-.Weapons .Weapon .weaponStats .weaponStatDamge {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  padding: 0.5em;
-}
-
-.Weapons .Weapon .weaponStats .weaponStatDamge .weaponStatDamgeContent {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  margin: 0 0 0 1em;
-}
-
-.Weapons .Weapon .weaponStats .weaponStatDamge .weaponStatDamgeContent .rangeContentHolder {
-  border: 1px solid black;
-  padding: 0.5em;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.Weapons .Weapon .weaponStats .weaponStatDamge .weaponStatDamgeContent .rangeContentHolder .rangeTitle {
-  margin: 0;
-}
-
-.Weapons .Weapon .weaponStats .weaponStatDamge .weaponStatDamgeContent .rangeContentHolder .rangeContent {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin: 0;
-}
-
-.Weapons .Weapon .weaponStats .weaponStatDamge .weaponStatDamgeContent .rangeContentHolder .rangeContent .bodydamageIcon {
-  width: 2em;
-  margin: 0 0.5em 0 1em;
-}
-
-.Weapons .Weapon .weaponStats .weaponStatDamge .weaponStatDamgeContent .rangeContentHolder .rangeContent .headdamageIcon {
-  width: 1em;
-  margin: 0 0.5em 0 1em;
-}
-
-.Weapons .Weapon .weaponStats .weaponStatDamge .weaponStatDamgeContent .rangeContentHolder .rangeContent .legsdamageIcon {
-  width: 1em;
-  margin: 0 0.5em 0 1em;
-}
-
-.Weapons .Weapon .weaponStats .weaponStatDamge .weaponStatDamgeContent .positionContentHolder {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  border: 1px solid black;
-  padding: 0.5em;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.Weapons .Weapon .weaponStats .weaponStatDamge .weaponStatDamgeContent .positionContentHolder .positionTitle {
-  margin: 0;
-}
-
-.Weapons .Weapon .weaponStats .weaponStatDamge .weaponStatDamgeContent .positionContentHolder .knifeFrontIcon {
-  width: 2em;
-  margin: 0 0.5em 0 1em;
-}
-
-.Weapons .Weapon .weaponStats .weaponStatDamge .weaponStatDamgeContent .positionContentHolder .knifeBackIcon {
-  width: 2em;
-  margin: 0 0.5em 0 1em;
-}
-
-.Weapons .Weapon .weaponStats .weaponStatDamge .weaponStatDamgeContent .positionContentHolder .positionContent {
-  margin: 0;
-}
-
-.Guides {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  background-color: #33ff33;
-  height: 80vh;
-  padding: 1em;
-}
-
-.Guides .Guide {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.Guides .Guide .guideNameWithImage {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin: 0 1em 0 0;
-}
-
-.Guides .Guide .guideNameWithImage .guideName {
-  font-size: 1.5em;
-}
-
-.Guides .Guide .guideNameWithImage .guideImage {
-  width: 30vh;
-}
-
-.GeneralSidebar {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background-color: rgba(255, 255, 255, 0.15);
-  -webkit-box-shadow: 0px 0px 50px 10px rgba(0, 0, 0, 0.15);
-          box-shadow: 0px 0px 50px 10px rgba(0, 0, 0, 0.15);
-  padding: 1em;
-  border-radius: 10px;
-}
-
-.GeneralSidebar .agentImageSidebar {
-  width: 4.5em;
-}
-
-.GeneralSidebar .weaponImageSidebar {
-  width: 6.5em;
-}
-
-.GeneralSidebar Link {
-  margin: 0 1em 0 0;
-}
-
-footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  height: 10vh;
+@media only screen and (max-width: 768px) {
+  .App {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    font-family: "Exo 2";
+    min-height: 100vh;
+  }
+  .App .Navbar .NavbarContent {
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    height: 100px;
+  }
+  .App .Navbar .NavbarContent .navLink {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 70px;
+  }
+  .App .Navbar .NavbarContent .navLink .navbarText {
+    font-size: 1em;
+    font-weight: bold;
+    margin: 0;
+    display: none;
+  }
+  .App .Navbar .NavbarContent .navLink.logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 15vw;
+    height: 100px;
+    margin: 0 auto 0 14px;
+    max-width: 60px;
+    border-radius: 10rem;
+  }
+  .App .Navbar .NavbarContent .navLink.agents {
+    width: 20vw;
+    max-width: 70px;
+    border-radius: 0.5rem 0.5rem 0 0;
+  }
+  .App .Navbar .NavbarContent .navLink.agents .agentsIcon {
+    width: 50%;
+    max-height: 50%;
+  }
+  .App .Navbar .NavbarContent .navLink.weapons {
+    width: 20vw;
+    max-width: 70px;
+    border-radius: 0.5rem 0.5rem 0 0;
+  }
+  .App .Navbar .NavbarContent .navLink.weapons .weaponsIcon {
+    width: 35%;
+  }
+  .App .Navbar .NavbarContent .navLink.guides {
+    width: 20vw;
+    max-width: 70px;
+    border-radius: 0.5rem 0.5rem 0 0;
+  }
+  .App .Navbar .NavbarContent .navLink.guides .guidesIcon {
+    width: 50%;
+  }
+  .App .Navbar .NavbarContent .fas.fa-search {
+    cursor: pointer;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: 170%;
+    width: 20vw;
+    height: 70px;
+    max-width: 70px;
+  }
+  .App .SearchPopup {
+    z-index: 100;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  .App .SearchPopup .SearchPopupContent {
+    background-color: rgba(255, 255, 255, 0.9);
+    width: 80%;
+    height: 70%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    border-radius: 10px;
+  }
+  .App .SearchPopup .SearchPopupContent .searchBox {
+    height: 2rem;
+    margin: 1rem 1rem 0 1rem;
+    border-radius: 3px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+    border: 1px solid black;
+  }
+  .App .SearchPopup .SearchPopupContent .allDataFiltered {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    overflow-y: scroll;
+    margin: 0 1rem 1rem 1rem;
+  }
+  .App .SearchPopup .SearchPopupContent .allDataFiltered .term {
+    padding: 1rem;
+    color: black;
+    text-decoration: none;
+    border-bottom: 1px solid black;
+  }
+  .App .Home {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .App .Home .HomeTitle {
+    font-size: 2em;
+    margin: 2em 0 1em 0;
+  }
+  .App .Home .HomepageImage {
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    width: 100vw;
+  }
+  .App .Agents {
+    background-color: #29abe2;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 10px;
+    min-height: calc(100vh - 120px);
+  }
+  .App .Agents .GeneralSidebar.Agents {
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 0;
+    min-height: 0;
+    margin: 0 auto 0 auto;
+  }
+  .App .Agents .GeneralSidebar.Agents .agentLinkSidebar {
+    width: 5rem;
+    margin: 0.5rem;
+    text-decoration: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-shadow: 0px 0px 10px -5px rgba(0, 0, 0, 0.75);
+            box-shadow: 0px 0px 10px -5px rgba(0, 0, 0, 0.75);
+  }
+  .App .Agents .GeneralSidebar.Agents .agentLinkSidebar .agentImageSidebar {
+    display: block;
+    width: 100%;
+    border-radius: 0.5rem;
+  }
+  .App .Agents .Agent {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .App .Agents .Agent .agentNameWithImage {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .App .Agents .Agent .agentNameWithImage .AgentName {
+    font-size: 3rem;
+    margin: 0 0 -1rem 0;
+    text-align: center;
+    font-family: "Permanent Marker", cursive;
+    height: 80%;
+    z-index: 2;
+    text-shadow: 0px 0px 0.3rem white;
+  }
+  .App .Agents .Agent .agentNameWithImage .AgentImage {
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    width: 100%;
+  }
+  .App .Agents .Agent .allAgentAbilityContent {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.5);
+    -ms-flex-item-align: center;
+        align-self: center;
+    width: 100%;
+    border-radius: 0.5rem;
+  }
+  .App .Agents .Agent .allAgentAbilityContent .AbilitiesTitle {
+    font-size: 2em;
+    text-align: center;
+    margin: 1rem 0 2rem 0;
+  }
+  .App .Agents .Agent .allAgentAbilityContent .agentAbilities {
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .App .Agents .Agent .allAgentAbilityContent .agentAbilities .agentAbilityIcons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 0.5rem;
+  }
+  .App .Agents .Agent .allAgentAbilityContent .agentAbilities .agentAbilityIcons .agentAbilityNamePreview {
+    font-size: 0.7em;
+    text-align: center;
+    margin: 0 0 auto 0;
+    display: none;
+  }
+  .App .Agents .Agent .allAgentAbilityContent .agentAbilities .agentAbilityIcons .agentAbilityLink .agentAbilityImage {
+    display: block;
+    width: 3rem;
+    height: 3rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    -webkit-box-shadow: 0px 0px 10px -5px rgba(0, 0, 0, 0.75);
+            box-shadow: 0px 0px 10px -5px rgba(0, 0, 0, 0.75);
+  }
+  .App .Agents .Agent .allAgentAbilityContent .agentAbilities .agentAbilityIcons .abilityContentCharges {
+    width: 5rem;
+    margin: 0.5rem 0 0 0;
+  }
+  .App .Agents .Agent .allAgentAbilityContent .agentAbilityContent {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 100%;
+  }
+  .App .Agents .Agent .allAgentAbilityContent .agentAbilityContent .abilityContentName {
+    font-size: 1em;
+    margin: 0;
+  }
+  .App .Agents .Agent .allAgentAbilityContent .agentAbilityContent .abilityContentDescription {
+    font-size: 1em;
+    margin: 0;
+  }
+  .App .Agents .Agent .allAgentAbilityContent .agentAbilityContent .abilityContentCost {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding: 10px;
+  }
+  .App .Agents .Agent .allAgentAbilityContent .agentAbilityContent .abilityContentCost .creditsIcon {
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    width: 10px;
+    margin: 0 10px 0 0;
+  }
+  .App .Agents .Agent .allAgentAbilityContent .agentAbilityContent .abilityContentCost .abilityContentCostText {
+    font-size: 1em;
+    margin: 0;
+  }
+  .App .Weapons {
+    background-color: #ff6633;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 10px;
+    min-height: calc(100vh - 120px);
+  }
+  .App .Weapons .GeneralSidebar.Weapons {
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-item-align: center;
+        align-self: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    min-height: 0;
+    height: 200px;
+    width: 90vw;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0;
+  }
+  .App .Weapons .GeneralSidebar.Weapons .generalSidebarWeaponText {
+    font-size: 1em;
+    text-align: center;
+  }
+  .App .Weapons .GeneralSidebar.Weapons .weaponImageSidebar {
+    width: 20vw;
+    min-width: 95px;
+    outline: 2px solid black;
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+  .App .Weapons .Weapon {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .App .Weapons .Weapon .weaponNameWithImage {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .App .Weapons .Weapon .weaponNameWithImage .weaponName {
+    font-size: 2em;
+    text-align: center;
+  }
+  .App .Weapons .Weapon .weaponNameWithImage .weaponImage {
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    width: 100%;
+  }
+  .App .Weapons .Weapon .weaponStats {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.5);
+    -ms-flex-item-align: center;
+        align-self: center;
+    width: 100%;
+    height: 450px;
+  }
+  .App .Weapons .Weapon .weaponStats .weaponStat {
+    font-size: 1em;
+    margin: 0;
+    padding: 10px;
+  }
+  .App .Weapons .Weapon .weaponStats .weaponStat.cost {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .App .Weapons .Weapon .weaponStats .weaponStat.cost .weaponStatCost {
+    font-size: 1em;
+    margin: 0;
+  }
+  .App .Weapons .Weapon .weaponStats .weaponStat.cost .creditsIcon {
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    width: 10px;
+    margin: 0 5px 0 10px;
+  }
+  .App .Weapons .Weapon .weaponStats .weaponStat.cost .weaponStatCostContent {
+    font-size: 1em;
+    margin: 0;
+  }
+  .App .Weapons .Weapon .weaponStats .weaponStatDamage {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding: 10px;
+  }
+  .App .Weapons .Weapon .weaponStats .weaponStatDamage .weaponStatDamageTitle {
+    font-size: 1em;
+    margin: 0;
+  }
+  .App .Weapons .Weapon .weaponStats .weaponStatDamage .weaponStatDamageContent {
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 0 0 0 5px;
+    background-color: rgba(255, 255, 255, 0.15);
+    padding: 10px;
+  }
+  .App .Weapons .Weapon .weaponStats .weaponStatDamage .weaponStatDamageContent .rangeContentHolder {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .App .Weapons .Weapon .weaponStats .weaponStatDamage .weaponStatDamageContent .rangeContentHolder .rangeTitle {
+    margin: 0;
+    font-size: 0.7em;
+    width: 50px;
+  }
+  .App .Weapons .Weapon .weaponStats .weaponStatDamage .weaponStatDamageContent .rangeContentHolder .rangeContent {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .App .Weapons .Weapon .weaponStats .weaponStatDamage .weaponStatDamageContent .rangeContentHolder .rangeContent .rangeContentPart {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 50px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .App .Weapons .Weapon .weaponStats .weaponStatDamage .weaponStatDamageContent .rangeContentHolder .rangeContent .rangeContentPart .rangeContentText {
+    margin: 0;
+  }
+  .App .Weapons .Weapon .weaponStats .weaponStatDamage .weaponStatDamageContent .rangeContentHolder .rangeContent .rangeContentPart .bodyDamageIcon {
+    height: 10px;
+  }
+  .App .Weapons .Weapon .weaponStats .weaponStatDamage .weaponStatDamageContent .rangeContentHolder .rangeContent .rangeContentPart .headDamageIcon {
+    height: 10px;
+  }
+  .App .Weapons .Weapon .weaponStats .weaponStatDamage .weaponStatDamageContent .rangeContentHolder .rangeContent .rangeContentPart .legsDamageIcon {
+    height: 10px;
+  }
+  .App .Weapons .Weapon .weaponStats .weaponStatDamage .weaponStatDamageContent.knife {
+    margin: 0 0 0 5px;
+  }
+  .App .Weapons .Weapon .weaponStats .weaponStatDamage .weaponStatDamageContent.knife .positionContentHolder {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding: 5px;
+  }
+  .App .Weapons .Weapon .weaponStats .weaponStatDamage .weaponStatDamageContent.knife .positionContentHolder .positionTitle {
+    margin: 0;
+    width: 70px;
+    font-size: 0.7em;
+  }
+  .App .Weapons .Weapon .weaponStats .weaponStatDamage .weaponStatDamageContent.knife .positionContentHolder .positionContentValue {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 50px;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .App .Weapons .Weapon .weaponStats .weaponStatDamage .weaponStatDamageContent.knife .positionContentHolder .positionContentValue .knifeFrontIcon {
+    width: 20px;
+  }
+  .App .Weapons .Weapon .weaponStats .weaponStatDamage .weaponStatDamageContent.knife .positionContentHolder .positionContentValue .knifeBackIcon {
+    width: 20px;
+  }
+  .App .Weapons .Weapon .weaponStats .weaponStatDamage .weaponStatDamageContent.knife .positionContentHolder .positionContentValue .positionContent {
+    margin: 0;
+  }
+  .App .Guides {
+    background-color: #33ff33;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 10px;
+    min-height: calc(100vh - 120px);
+  }
+  .App .Guides .GeneralSidebar.Guides {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 0;
+    min-height: 100%;
+  }
+  .App .Guides .GeneralSidebar.Guides .GuideLink {
+    font-size: 1em;
+  }
+  .App .Guides .Guide {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 10px;
+  }
+  .App .Guides .Guide .guideNameWithImage {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .App .Guides .Guide .guideNameWithImage .guideName {
+    font-size: 2em;
+    margin: 0 0 10px 0;
+    text-align: center;
+  }
+  .App .Guides .Guide .guideNameWithImage .guideImage {
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 0 10px 0;
+  }
+  .App .Guides .Guide .guideContentHolder {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .App .Guides .Guide .guideContentHolder .guideContentText {
+    font-size: 1em;
+    margin: 0;
+  }
+  .App footer {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .App {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    font-family: "Exo 2";
+    min-height: 100vh;
+  }
+  .App .Navbar .NavbarContent {
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    height: 100px;
+  }
+  .App .Navbar .NavbarContent .navLink {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 70px;
+  }
+  .App .Navbar .NavbarContent .navLink .navbarText {
+    font-size: 1em;
+    font-weight: bold;
+    margin: 0;
+    display: none;
+  }
+  .App .Navbar .NavbarContent .navLink.logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 15vw;
+    height: 100px;
+    margin: 0 auto 0 14px;
+    max-width: 60px;
+  }
+  .App .Navbar .NavbarContent .navLink.agents {
+    width: 20vw;
+    max-width: 70px;
+  }
+  .App .Navbar .NavbarContent .navLink.agents .agentsIcon {
+    width: 50%;
+    max-height: 50%;
+  }
+  .App .Navbar .NavbarContent .navLink.weapons {
+    width: 20vw;
+    max-width: 70px;
+  }
+  .App .Navbar .NavbarContent .navLink.weapons .weaponsIcon {
+    width: 35%;
+  }
+  .App .Navbar .NavbarContent .navLink.guides {
+    width: 20vw;
+    max-width: 70px;
+  }
+  .App .Navbar .NavbarContent .navLink.guides .guidesIcon {
+    width: 50%;
+  }
+  .App .Navbar .NavbarContent .fas.fa-search {
+    cursor: pointer;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: 170%;
+    width: 20vw;
+    height: 70px;
+    max-width: 70px;
+  }
+  .App .SearchPopup {
+    z-index: 100;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  .App .SearchPopup .SearchPopupContent {
+    background-color: rgba(255, 255, 255, 0.9);
+    width: 80%;
+    height: 70%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    border-radius: 10px;
+  }
+  .App .SearchPopup .SearchPopupContent .searchBox {
+    height: 2rem;
+    margin: 1rem 1rem 0 1rem;
+    border-radius: 3px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+    border: 1px solid black;
+  }
+  .App .SearchPopup .SearchPopupContent .allDataFiltered {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    overflow-y: scroll;
+    margin: 0 1rem 1rem 1rem;
+  }
+  .App .SearchPopup .SearchPopupContent .allDataFiltered .term {
+    padding: 1rem;
+    color: black;
+    text-decoration: none;
+    border-bottom: 1px solid black;
+  }
+  .App .Home {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 0 0 auto 0;
+  }
+  .App .Home .HomeTitle {
+    font-size: 2em;
+    margin: 2em 0 1em 0;
+  }
+  .App .Home .HomepageImage {
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    max-height: 60vh;
+    width: auto;
+    max-width: 100vw;
+  }
+  .App .Agents {
+    background-color: #29abe2;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding: 10px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    min-height: calc(100vh - 200px);
+  }
+  .App .Agents .GeneralSidebar.Agents {
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 0 0 0 2rem;
+    min-height: 0;
+    height: 40rem;
+    width: 16rem;
+    padding: 0;
+    -ms-flex-item-align: center;
+        align-self: center;
+  }
+  .App .Agents .GeneralSidebar.Agents .agentImageSidebar {
+    width: 60px;
+    outline: 2px solid black;
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 8rem;
+  }
+  .App .Agents .Agent {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 25rem;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+  }
+  .App .Agents .Agent .agentNameWithImage {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .App .Agents .Agent .agentNameWithImage .AgentName {
+    font-size: 2em;
+    text-align: center;
+  }
+  .App .Agents .Agent .agentNameWithImage .AgentImage {
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    width: 50%;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+  }
+  .App .Agents .Agent .allAgentAbilityContent {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.5);
+    -ms-flex-item-align: center;
+        align-self: center;
+    padding: 10px;
+    height: 400px;
+    padding: 0;
+    width: 100%;
+    border-radius: 10px;
+  }
+  .App .Agents .Agent .allAgentAbilityContent .AbilitiesTitle {
+    font-size: 2em;
+    text-align: center;
+    margin: 0 0 10px 0;
+    padding: 10px 0 0 0;
+  }
+  .App .Agents .Agent .allAgentAbilityContent .agentAbilities {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .App .Agents .Agent .allAgentAbilityContent .agentAbilities .agentAbilityIcons {
+    width: 25%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 100px;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-decoration: none;
+  }
+  .App .Agents .Agent .allAgentAbilityContent .agentAbilities .agentAbilityIcons .agentAbilityNamePreview {
+    font-size: 1em;
+    text-align: center;
+    margin: 0 0 auto 0;
+    color: black;
+  }
+  .App .Agents .Agent .allAgentAbilityContent .agentAbilities .agentAbilityIcons .agentAbilityImage {
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    width: 50px;
+    height: 50px;
+    outline: 2px solid black;
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+  .App .Agents .Agent .allAgentAbilityContent .agentAbilities .agentAbilityIcons .abilityContentCharges {
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    width: 50px;
+    margin: 0.5rem 0 0 0;
+  }
+  .App .Agents .Agent .allAgentAbilityContent .agentAbilityContent {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 100%;
+  }
+  .App .Agents .Agent .allAgentAbilityContent .agentAbilityContent .abilityContentName {
+    font-size: 1em;
+    margin: 10px 0 10px 0;
+    padding: 10px 10px 0 10px;
+  }
+  .App .Agents .Agent .allAgentAbilityContent .agentAbilityContent .abilityContentDescription {
+    font-size: 1em;
+    margin: 0 0 auto 0;
+    padding: 10px;
+  }
+  .App .Agents .Agent .allAgentAbilityContent .agentAbilityContent .abilityContentCost {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding: 10px;
+  }
+  .App .Agents .Agent .allAgentAbilityContent .agentAbilityContent .abilityContentCost .creditsIcon {
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    width: 10px;
+    margin: 0 10px 0 0;
+  }
+  .App .Agents .Agent .allAgentAbilityContent .agentAbilityContent .abilityContentCost .abilityContentCostText {
+    font-size: 1em;
+    margin: 0;
+  }
+  .App .Weapons {
+    background-color: #ff6633;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding: 10px;
+    min-height: calc(100vh - 200px);
+  }
+  .App .Weapons .GeneralSidebar.Weapons {
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-item-align: center;
+        align-self: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    height: 40rem;
+    min-height: 0;
+    width: 40vw;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 0;
+  }
+  .App .Weapons .GeneralSidebar.Weapons .generalSidebarWeaponText {
+    font-size: 1em;
+    text-align: center;
+  }
+  .App .Weapons .GeneralSidebar.Weapons .weaponImageSidebar {
+    width: 20vw;
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+  .App .Weapons .Weapon {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 25rem;
+    margin: 0 0 0 auto;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+  }
+  .App .Weapons .Weapon .weaponNameWithImage {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 0 0 1rem 0;
+  }
+  .App .Weapons .Weapon .weaponNameWithImage .weaponName {
+    font-size: 2em;
+    text-align: center;
+  }
+  .App .Weapons .Weapon .weaponNameWithImage .weaponImage {
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    width: 100%;
+  }
+  .App .Weapons .Weapon .weaponStats {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.5);
+    -ms-flex-item-align: center;
+        align-self: center;
+    width: 100%;
+    height: 450px;
+    border-radius: 10px;
+  }
+  .App .Weapons .Weapon .weaponStats .weaponStat {
+    font-size: 1em;
+    margin: 0;
+    padding: 10px;
+  }
+  .App .Weapons .Weapon .weaponStats .weaponStat.cost {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .App .Weapons .Weapon .weaponStats .weaponStat.cost .weaponStatCost {
+    font-size: 1em;
+    margin: 0;
+  }
+  .App .Weapons .Weapon .weaponStats .weaponStat.cost .creditsIcon {
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    width: 10px;
+    margin: 0 5px 0 10px;
+  }
+  .App .Weapons .Weapon .weaponStats .weaponStat.cost .weaponStatCostContent {
+    font-size: 1em;
+    margin: 0;
+  }
+  .App .Weapons .Weapon .weaponStats .weaponStatDamage {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding: 10px;
+  }
+  .App .Weapons .Weapon .weaponStats .weaponStatDamage .weaponStatDamageTitle {
+    font-size: 1em;
+    margin: 0;
+  }
+  .App .Weapons .Weapon .weaponStats .weaponStatDamage .weaponStatDamageContent {
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 0 0 0 5px;
+    background-color: rgba(255, 255, 255, 0.15);
+    padding: 10px;
+  }
+  .App .Weapons .Weapon .weaponStats .weaponStatDamage .weaponStatDamageContent .rangeContentHolder {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .App .Weapons .Weapon .weaponStats .weaponStatDamage .weaponStatDamageContent .rangeContentHolder .rangeTitle {
+    margin: 0;
+    font-size: 0.7em;
+    width: 50px;
+  }
+  .App .Weapons .Weapon .weaponStats .weaponStatDamage .weaponStatDamageContent .rangeContentHolder .rangeContent {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .App .Weapons .Weapon .weaponStats .weaponStatDamage .weaponStatDamageContent .rangeContentHolder .rangeContent .rangeContentPart {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 50px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .App .Weapons .Weapon .weaponStats .weaponStatDamage .weaponStatDamageContent .rangeContentHolder .rangeContent .rangeContentPart .rangeContentText {
+    margin: 0;
+  }
+  .App .Weapons .Weapon .weaponStats .weaponStatDamage .weaponStatDamageContent .rangeContentHolder .rangeContent .rangeContentPart .bodyDamageIcon {
+    height: 10px;
+  }
+  .App .Weapons .Weapon .weaponStats .weaponStatDamage .weaponStatDamageContent .rangeContentHolder .rangeContent .rangeContentPart .headDamageIcon {
+    height: 10px;
+  }
+  .App .Weapons .Weapon .weaponStats .weaponStatDamage .weaponStatDamageContent .rangeContentHolder .rangeContent .rangeContentPart .legsDamageIcon {
+    height: 10px;
+  }
+  .App .Weapons .Weapon .weaponStats .weaponStatDamage .weaponStatDamageContent.knife {
+    margin: 0 0 0 5px;
+  }
+  .App .Weapons .Weapon .weaponStats .weaponStatDamage .weaponStatDamageContent.knife .positionContentHolder {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding: 5px;
+  }
+  .App .Weapons .Weapon .weaponStats .weaponStatDamage .weaponStatDamageContent.knife .positionContentHolder .positionTitle {
+    margin: 0;
+    width: 70px;
+    font-size: 0.7em;
+  }
+  .App .Weapons .Weapon .weaponStats .weaponStatDamage .weaponStatDamageContent.knife .positionContentHolder .positionContentValue {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 50px;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .App .Weapons .Weapon .weaponStats .weaponStatDamage .weaponStatDamageContent.knife .positionContentHolder .positionContentValue .knifeFrontIcon {
+    width: 20px;
+  }
+  .App .Weapons .Weapon .weaponStats .weaponStatDamage .weaponStatDamageContent.knife .positionContentHolder .positionContentValue .knifeBackIcon {
+    width: 20px;
+  }
+  .App .Weapons .Weapon .weaponStats .weaponStatDamage .weaponStatDamageContent.knife .positionContentHolder .positionContentValue .positionContent {
+    margin: 0;
+  }
+  .App .Guides {
+    background-color: #33ff33;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding: 10px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    min-height: calc(100vh - 200px);
+  }
+  .App .Guides .GeneralSidebar.Guides {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 1rem;
+    min-height: 0;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+  }
+  .App .Guides .GeneralSidebar.Guides .GuideLink {
+    font-size: 1em;
+    padding: 0.5rem;
+    margin: 0.5rem 0 0.5rem 0;
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+  .App .Guides .Guide {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 10px;
+    width: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+  .App .Guides .Guide .guideNameWithImage {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .App .Guides .Guide .guideNameWithImage .guideName {
+    font-size: 2em;
+    margin: 0 0 10px 0;
+    text-align: center;
+  }
+  .App .Guides .Guide .guideNameWithImage .guideImage {
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 0 10px 0;
+  }
+  .App .Guides .Guide .guideContentHolder {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .App .Guides .Guide .guideContentHolder .guideContentText {
+    font-size: 1em;
+    margin: 0;
+  }
+  .App footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 5rem;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .App {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    font-family: "Exo 2";
+    min-height: 100vh;
+  }
+  .App .Navbar .NavbarContent {
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    height: 100px;
+  }
+  .App .Navbar .NavbarContent .navLink {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 70px;
+  }
+  .App .Navbar .NavbarContent .navLink .navbarText {
+    font-size: 1em;
+    font-weight: bold;
+    margin: 0;
+    display: none;
+  }
+  .App .Navbar .NavbarContent .navLink.logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 15vw;
+    height: 100px;
+    margin: 0 auto 0 14px;
+    max-width: 60px;
+  }
+  .App .Navbar .NavbarContent .navLink.agents {
+    width: 20vw;
+    max-width: 70px;
+  }
+  .App .Navbar .NavbarContent .navLink.agents .agentsIcon {
+    width: 50%;
+    max-height: 50%;
+  }
+  .App .Navbar .NavbarContent .navLink.weapons {
+    width: 20vw;
+    max-width: 70px;
+  }
+  .App .Navbar .NavbarContent .navLink.weapons .weaponsIcon {
+    width: 35%;
+  }
+  .App .Navbar .NavbarContent .navLink.guides {
+    width: 20vw;
+    max-width: 70px;
+  }
+  .App .Navbar .NavbarContent .navLink.guides .guidesIcon {
+    width: 50%;
+  }
+  .App .Navbar .NavbarContent .fas.fa-search {
+    cursor: pointer;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: 170%;
+    width: 20vw;
+    height: 70px;
+    max-width: 70px;
+  }
+  .App .SearchPopup {
+    z-index: 100;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  .App .SearchPopup .SearchPopupContent {
+    background-color: rgba(255, 255, 255, 0.9);
+    width: 80%;
+    height: 70%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    border-radius: 10px;
+  }
+  .App .SearchPopup .SearchPopupContent .searchBox {
+    height: 2rem;
+    margin: 1rem 1rem 0 1rem;
+    border-radius: 3px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+    border: 1px solid black;
+  }
+  .App .SearchPopup .SearchPopupContent .allDataFiltered {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    overflow-y: scroll;
+    margin: 0 1rem 1rem 1rem;
+  }
+  .App .SearchPopup .SearchPopupContent .allDataFiltered .term {
+    padding: 1rem;
+    color: black;
+    text-decoration: none;
+    border-bottom: 1px solid black;
+  }
+  .App .Home {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 0 0 auto 0;
+  }
+  .App .Home .HomeTitle {
+    font-size: 2em;
+    margin: 2em 0 1em 0;
+  }
+  .App .Home .HomepageImage {
+    max-height: 60vh;
+    width: auto;
+  }
+  .App .Agents {
+    background-color: #29abe2;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding: 10px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    min-height: calc(100vh - 200px);
+  }
+  .App .Agents .GeneralSidebar.Agents {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 0 0 0 2rem;
+    min-height: 0;
+    height: 50rem;
+    width: 16rem;
+    padding: 0;
+    -ms-flex-item-align: center;
+        align-self: center;
+  }
+  .App .Agents .GeneralSidebar.Agents .agentImageSidebar {
+    width: 60px;
+    width: 12rem;
+    outline: 2px solid black;
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+  .App .Agents .Agent {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 60rem;
+  }
+  .App .Agents .Agent .agentNameWithImage {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .App .Agents .Agent .agentNameWithImage .AgentName {
+    text-align: center;
+    position: absolute;
+    font-size: 7rem;
+    left: 35%;
+    z-index: 2;
+    top: 5%;
+  }
+  .App .Agents .Agent .agentNameWithImage .AgentImage {
+    position: absolute;
+    right: 0;
+    bottom: 80px;
+    width: auto;
+    height: 40vw;
+    max-height: 85%;
+    z-index: 1;
+  }
+  .App .Agents .Agent .allAgentAbilityContent {
+    z-index: 2;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.7);
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+    padding: 10px;
+    height: 400px;
+    padding: 0;
+    width: 30rem;
+    border-radius: 10px;
+    margin: auto 0 0 0;
+  }
+  .App .Agents .Agent .allAgentAbilityContent .AbilitiesTitle {
+    font-size: 2em;
+    text-align: center;
+    margin: 0 0 10px 0;
+    padding: 10px 0 0 0;
+  }
+  .App .Agents .Agent .allAgentAbilityContent .agentAbilities {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .App .Agents .Agent .allAgentAbilityContent .agentAbilities .agentAbilityIcons {
+    width: 25%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 100px;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .App .Agents .Agent .allAgentAbilityContent .agentAbilities .agentAbilityIcons .agentAbilityNamePreview {
+    font-size: 1em;
+    text-align: center;
+    margin: 0 0 auto 0;
+  }
+  .App .Agents .Agent .allAgentAbilityContent .agentAbilities .agentAbilityIcons .agentAbilityImage {
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    width: 50px;
+    height: 50px;
+    outline: 2px solid black;
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+  .App .Agents .Agent .allAgentAbilityContent .agentAbilities .agentAbilityIcons .abilityContentCharges {
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    width: 50px;
+    margin: 5px 0 0 0;
+  }
+  .App .Agents .Agent .allAgentAbilityContent .agentAbilityContent {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 100%;
+  }
+  .App .Agents .Agent .allAgentAbilityContent .agentAbilityContent .abilityContentName {
+    font-size: 1em;
+    margin: 10px 0 10px 0;
+    padding: 10px 10px 0 10px;
+  }
+  .App .Agents .Agent .allAgentAbilityContent .agentAbilityContent .abilityContentDescription {
+    font-size: 1em;
+    margin: 0 0 auto 0;
+    padding: 10px;
+  }
+  .App .Agents .Agent .allAgentAbilityContent .agentAbilityContent .abilityContentCost {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding: 10px;
+  }
+  .App .Agents .Agent .allAgentAbilityContent .agentAbilityContent .abilityContentCost .creditsIcon {
+    width: 10px;
+    margin: 0 10px 0 0;
+  }
+  .App .Agents .Agent .allAgentAbilityContent .agentAbilityContent .abilityContentCost .abilityContentCostText {
+    font-size: 1em;
+    margin: 0;
+  }
+  .App .Weapons {
+    background-color: #ff6633;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding: 10px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    min-height: calc(100vh - 200px);
+  }
+  .App .Weapons .GeneralSidebar.Weapons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-item-align: center;
+        align-self: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    height: 50rem;
+    min-height: 0;
+    width: 24rem;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 0;
+    -ms-flex-line-pack: start;
+        align-content: flex-start;
+  }
+  .App .Weapons .GeneralSidebar.Weapons .generalSidebarWeaponText {
+    font-size: 1em;
+    text-align: center;
+  }
+  .App .Weapons .GeneralSidebar.Weapons .weaponImageSidebar {
+    width: 20rem;
+    outline: 2px solid black;
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+  .App .Weapons .Weapon {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 25rem;
+  }
+  .App .Weapons .Weapon .weaponNameWithImage {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 0 0 1rem 0;
+  }
+  .App .Weapons .Weapon .weaponNameWithImage .weaponName {
+    text-align: center;
+    position: absolute;
+    font-size: 7rem;
+    left: 50%;
+    top: 5%;
+    z-index: 2;
+  }
+  .App .Weapons .Weapon .weaponNameWithImage .weaponImage {
+    width: 50%;
+    position: absolute;
+    right: 0;
+    bottom: 30%;
+    z-index: 1;
+  }
+  .App .Weapons .Weapon .weaponStats {
+    z-index: 2;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.7);
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+    width: 30rem;
+    height: 450px;
+    border-radius: 10px;
+    margin: auto 0 0 0;
+  }
+  .App .Weapons .Weapon .weaponStats .weaponStat {
+    font-size: 1em;
+    margin: 0;
+    padding: 10px;
+  }
+  .App .Weapons .Weapon .weaponStats .weaponStat.cost {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .App .Weapons .Weapon .weaponStats .weaponStat.cost .weaponStatCost {
+    font-size: 1em;
+    margin: 0;
+  }
+  .App .Weapons .Weapon .weaponStats .weaponStat.cost .creditsIcon {
+    width: 10px;
+    margin: 0 5px 0 10px;
+  }
+  .App .Weapons .Weapon .weaponStats .weaponStat.cost .weaponStatCostContent {
+    font-size: 1em;
+    margin: 0;
+  }
+  .App .Weapons .Weapon .weaponStats .weaponStatDamage {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding: 10px;
+  }
+  .App .Weapons .Weapon .weaponStats .weaponStatDamage .weaponStatDamageTitle {
+    font-size: 1em;
+    margin: 0;
+  }
+  .App .Weapons .Weapon .weaponStats .weaponStatDamage .weaponStatDamageContent {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 0 0 0 5px;
+    background-color: rgba(255, 255, 255, 0.15);
+    padding: 10px;
+  }
+  .App .Weapons .Weapon .weaponStats .weaponStatDamage .weaponStatDamageContent .rangeContentHolder {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .App .Weapons .Weapon .weaponStats .weaponStatDamage .weaponStatDamageContent .rangeContentHolder .rangeTitle {
+    margin: 0;
+    font-size: 0.7em;
+    width: 50px;
+  }
+  .App .Weapons .Weapon .weaponStats .weaponStatDamage .weaponStatDamageContent .rangeContentHolder .rangeContent {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .App .Weapons .Weapon .weaponStats .weaponStatDamage .weaponStatDamageContent .rangeContentHolder .rangeContent .rangeContentPart {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 50px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .App .Weapons .Weapon .weaponStats .weaponStatDamage .weaponStatDamageContent .rangeContentHolder .rangeContent .rangeContentPart .rangeContentText {
+    margin: 0;
+  }
+  .App .Weapons .Weapon .weaponStats .weaponStatDamage .weaponStatDamageContent .rangeContentHolder .rangeContent .rangeContentPart .bodyDamageIcon {
+    height: 10px;
+  }
+  .App .Weapons .Weapon .weaponStats .weaponStatDamage .weaponStatDamageContent .rangeContentHolder .rangeContent .rangeContentPart .headDamageIcon {
+    height: 10px;
+  }
+  .App .Weapons .Weapon .weaponStats .weaponStatDamage .weaponStatDamageContent .rangeContentHolder .rangeContent .rangeContentPart .legsDamageIcon {
+    height: 10px;
+  }
+  .App .Weapons .Weapon .weaponStats .weaponStatDamage .weaponStatDamageContent.knife {
+    margin: 0 0 0 5px;
+  }
+  .App .Weapons .Weapon .weaponStats .weaponStatDamage .weaponStatDamageContent.knife .positionContentHolder {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding: 5px;
+  }
+  .App .Weapons .Weapon .weaponStats .weaponStatDamage .weaponStatDamageContent.knife .positionContentHolder .positionTitle {
+    margin: 0;
+    width: 70px;
+    font-size: 0.7em;
+  }
+  .App .Weapons .Weapon .weaponStats .weaponStatDamage .weaponStatDamageContent.knife .positionContentHolder .positionContentValue {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 50px;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .App .Weapons .Weapon .weaponStats .weaponStatDamage .weaponStatDamageContent.knife .positionContentHolder .positionContentValue .knifeFrontIcon {
+    width: 20px;
+  }
+  .App .Weapons .Weapon .weaponStats .weaponStatDamage .weaponStatDamageContent.knife .positionContentHolder .positionContentValue .knifeBackIcon {
+    width: 20px;
+  }
+  .App .Weapons .Weapon .weaponStats .weaponStatDamage .weaponStatDamageContent.knife .positionContentHolder .positionContentValue .positionContent {
+    margin: 0;
+  }
+  .App .Guides {
+    background-color: #33ff33;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding: 10px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    min-height: calc(100vh - 200px);
+  }
+  .App .Guides .GeneralSidebar.Guides {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 1rem;
+    min-height: 0;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+  }
+  .App .Guides .GeneralSidebar.Guides .GuideLink {
+    font-size: 1em;
+    padding: 0.5rem;
+    margin: 0.5rem 0 0.5rem 0;
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+  .App .Guides .Guide {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 10px;
+    width: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+  }
+  .App .Guides .Guide .guideNameWithImage {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .App .Guides .Guide .guideNameWithImage .guideName {
+    font-size: 2em;
+    margin: 0 0 10px 0;
+    text-align: center;
+  }
+  .App .Guides .Guide .guideNameWithImage .guideImage {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 0 10px 0;
+  }
+  .App .Guides .Guide .guideContentHolder {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .App .Guides .Guide .guideContentHolder .guideContentText {
+    font-size: 1em;
+    margin: 0;
+  }
+  .App footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 5rem;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 /*# sourceMappingURL=allStyles.css.map */

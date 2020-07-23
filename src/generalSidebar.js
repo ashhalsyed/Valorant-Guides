@@ -1,9 +1,13 @@
-import React from "react";
+import React, { } from "react";
 import { Link, useLocation } from 'react-router-dom';
 import "./styles/allStyles.scss";
 import { allAgents, allWeapons, allGuides } from './allData'
 
-function GeneralSidebar() {
+import Ripples from 'react-ripples'
+// import { Element, scroller, scrollTo } from 'react-scroll';
+// import * as Scroll from 'react-scroll';
+
+function GeneralSidebar(props) {
 
     const currentURL = useLocation().pathname.split('/')
     const currentPageType = currentURL[1]
@@ -28,19 +32,27 @@ function GeneralSidebar() {
                 var currentAgent = currentURL[2]
 
                 var selectedAgent = false;
-                if (currentAgent === undefined && agent.name === 'Brimstone') {
+                if (currentAgent === undefined && agent.name === allAgents[0].name) {
                     selectedAgent = true
                 }
                 else if (currentAgent === agent.name) {
                     selectedAgent = true
                 }
 
-                selectedAgent = selectedAgent ? { outline: '5px solid rgb(255,0,0)', zIndex: '2' } : { outline: '2px solid rgb(0,0,0)' }
+                const selectedAgentStyle = {
+                    // background: ' #ff416c', /* fallback for old browsers */
+                    background: 'radial-gradient(#cb356b, #bd3f32)'
+                }
+                const notSelectedAgentStyle = { background: 'rgba(255,255,255,0.5)' }
+
+                const selectedAgentCompletedStyle = selectedAgent ? selectedAgentStyle : notSelectedAgentStyle
 
                 if (agent.type === type) {
                     typeContent.push(
-                        <Link style={selectedAgent} key={agent.name} to={'/Agents/' + agent.name}>
-                            <img className='agentImageSidebar' src={agent.imageSmall} alt='agent preview in sidebar' />
+                        <Link className='agentLinkSidebar' key={agent.name} to={'/Agents/' + agent.name}>
+                            <Ripples color="rgba(255,255,255,0.3)" during={800}>
+                                <img className='agentImageSidebar' style={selectedAgentCompletedStyle} src={agent.imageSmall} alt='agent preview in sidebar' />
+                            </Ripples>
                         </Link >
                     )
                 }
@@ -64,18 +76,27 @@ function GeneralSidebar() {
                 var currentWeapon = currentURL[2]
 
                 var selectedWeapon = false;
-                if (currentWeapon === undefined && weapon.name === 'Classic') {
+                if (currentWeapon === undefined && weapon.name === allWeapons[0].name) {
                     selectedWeapon = true
                 }
                 else if (currentWeapon === weapon.name) {
                     selectedWeapon = true
                 }
 
-                selectedWeapon = selectedWeapon ? { outline: '5px solid rgb(255,0,0)', zIndex: '2' } : { outline: '2px solid rgb(0,0,0)' }
+                const selectedWeaponStyle = {
+                    // background: ' #ff416c', /* fallback for old browsers */
+                    background: 'radial-gradient(#cb356b, #bd3f32)'
+                }
+                const notSelectedWeaponStyle = { background: 'rgba(255,255,255,0.5)' }
+
+                const selectedWeaponCompletedStyle = selectedWeapon ? selectedWeaponStyle : notSelectedWeaponStyle
+
                 if (weapon.type === type) {
                     typeContent.push(
-                        <Link style={selectedWeapon} key={weapon.name} to={'/Weapons/' + weapon.name}>
-                            <img className='weaponImageSidebar' src={weapon.image} alt='weapon preview in sidebar' />
+                        <Link className='weaponLinkSidebar' key={weapon.name} to={'/Weapons/' + weapon.name}>
+                            <Ripples color="rgba(255,255,255,0.3)" during={800}>
+                                <img className='weaponImageSidebar' style={selectedWeaponCompletedStyle} src={weapon.image} alt='weapon preview in sidebar' />
+                            </Ripples>
                         </Link >
                     )
                 }
@@ -109,9 +130,35 @@ function GeneralSidebar() {
 
                 //Adds a question mark only visually if this link is a question
 
+
+                var currentGuide = currentURL[2]
+
+                var selectedGuide = false;
+                if (currentGuide === undefined && guide.name === allGuides[0].name) {
+                    selectedGuide = true
+                }
+                else if (currentGuide === guide.name) {
+                    selectedGuide = true
+                }
+
+                const selectedGuideStyle = {
+                    // background: ' #ff416c', /* fallback for old browsers */
+                    background: 'radial-gradient(#cb356b, #bd3f32)',
+                    color: 'white'
+                    // color: 'red'
+                }
+                const notSelectedGuideStyle = { background: 'rgba(255,255,255,0.5)' }
+
+                const selectedGuideCompletedStyle = selectedGuide ? selectedGuideStyle : notSelectedGuideStyle
+
                 if (guide.type === type) {
                     typeContent.push(
-                        <Link key={guide.name} to={'/Guides/' + guide.name}>{guide.name}{questionMark}</Link >
+                        <Ripples color="rgba(255,255,255,0.3)" during={800}>
+                            <Link key={guide.name} style={selectedGuideCompletedStyle} to={'/Guides/' + guide.name} className='GuideLinkContent'>
+
+                                {guide.name}{questionMark}
+                            </Link >
+                        </Ripples>
                     )
                 }
             })
@@ -132,6 +179,8 @@ function GeneralSidebar() {
     return (
         <div className={'GeneralSidebar ' + currentPageType}>
             {typeContent}
+            {/* <mySpecialElement name="mySpecialElement"><p>baba</p></mySpecialElement> */}
+
         </div>
     );
 }

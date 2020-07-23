@@ -1,5 +1,5 @@
-import React from "react";
-import { useLocation, Route, Link } from 'react-router-dom';
+import React, { } from "react";
+import { useLocation, Link } from 'react-router-dom';
 import "../styles/allStyles.scss";
 import { allAgents } from '../allData'
 import AgentAbility from './agentAbility'
@@ -7,7 +7,9 @@ import charges1 from '../assets/charges1.svg'
 import charges2 from '../assets/charges2.svg'
 import charges3 from '../assets/charges3.svg'
 
-function Agent() {
+import Ripples from 'react-ripples'
+
+function Agent(props) {
 
     var currentURL = useLocation().pathname.split("/")
     var currentAgent = currentURL[2]
@@ -44,14 +46,28 @@ function Agent() {
             selectedAbility = true
         }
 
-        selectedAbility = selectedAbility ? { outline: '3px solid rgb(255,0,0)', zIndex: '2' } : { outline: '2px solid rgb(0,0,0)' }
+        // selectedAbility = selectedAbility ? { outline: '3px solid rgb(255,0,0)', zIndex: '2' } : { outline: '2px solid rgb(0,0,0)' }
+        // selectedAbility = selectedAbility ? {} : {}
+
+        const selectedAbilityStyle = {
+            // background: ' #ff416c', /* fallback for old browsers */
+            background: 'radial-gradient(#cb356b, #bd3f32)'
+        }
+        const notSelectedAbilityStyle = { background: 'rgba(255,255,255,0.5)' }
+
+        const selectedAbilityCompletedStyle = selectedAbility ? selectedAbilityStyle : notSelectedAbilityStyle
 
         allAbilities.push(
-            <Link to={'/Agents/' + currentAgent.name + "/" + ability.name} key={ability.name} className='agentAbilityIcons'>
+            <div className='agentAbilityIcons' key={ability.name}>
                 <p className='agentAbilityNamePreview'>{ability.name}</p>
-                <img style={selectedAbility} className='agentAbilityImage' src={ability.image} alt={ability.image} />
+                <Ripples color="rgba(255,255,255,0.3)" during={800}>
+                    <Link to={'/Agents/' + currentAgent.name + "/" + ability.name} className='agentAbilityLink'>
+                        <img style={selectedAbilityCompletedStyle} className='agentAbilityImage' src={ability.image} alt={ability.image} />
+                    </Link>
+                </Ripples>
                 <img className='abilityContentCharges' src={chargesContent} alt='charges icon' />
-            </Link>
+            </div>
+
         )
     })
     //Sets the abilities according to the currentAgent
@@ -71,6 +87,7 @@ function Agent() {
     return (
 
         <div className="Agent">
+            {/* <Element name="AgentScrollElement"> */}
             <div className='agentNameWithImage'>
                 <p className='AgentName'>{currentAgent.name}</p>
                 <img className='AgentImage' src={currentAgent.image} alt='agent'></img>
@@ -81,8 +98,10 @@ function Agent() {
                     {allAbilities}
                     {/* <Route path={"/Agents/" + currentAgent.name + "/" + currentAbility} component={AgentAbility} /> */}
                 </div>
-                <Route path="/Agents" component={AgentAbility} />
+                {/* <Route path="/Agents" component={AgentAbility} /> */}
+                <AgentAbility />
             </div>
+            {/* </Element> */}
         </div>
     );
 }
