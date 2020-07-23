@@ -1,5 +1,7 @@
 # Valorant Guides
 
+![gif preview](https://github.com/ashhalsyed/Valorant-Guides/tree/master/src/assets/valorantGuidesPreviewGif)
+
 A wiki site for Valorant agents, abilities, weapons, and guides
 
 ## Getting Started
