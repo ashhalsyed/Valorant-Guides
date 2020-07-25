@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/Valorant-Guides/static/css/main.cb16d8c7.chunk.css",
-    "main.js": "/Valorant-Guides/static/js/main.ff65731b.chunk.js",
-    "main.js.map": "/Valorant-Guides/static/js/main.ff65731b.chunk.js.map",
+    "main.js": "/Valorant-Guides/static/js/main.5da48b7e.chunk.js",
+    "main.js.map": "/Valorant-Guides/static/js/main.5da48b7e.chunk.js.map",
     "runtime-main.js": "/Valorant-Guides/static/js/runtime-main.94b73081.js",
     "runtime-main.js.map": "/Valorant-Guides/static/js/runtime-main.94b73081.js.map",
     "static/js/2.8f8b9409.chunk.js": "/Valorant-Guides/static/js/2.8f8b9409.chunk.js",
     "static/js/2.8f8b9409.chunk.js.map": "/Valorant-Guides/static/js/2.8f8b9409.chunk.js.map",
     "index.html": "/Valorant-Guides/index.html",
-    "precache-manifest.79e1d130f5c5272d0d72ef73925365e4.js": "/Valorant-Guides/precache-manifest.79e1d130f5c5272d0d72ef73925365e4.js",
+    "precache-manifest.377014b44bc5990e96248f850f5a0eac.js": "/Valorant-Guides/precache-manifest.377014b44bc5990e96248f850f5a0eac.js",
     "service-worker.js": "/Valorant-Guides/service-worker.js",
     "static/css/main.cb16d8c7.chunk.css.map": "/Valorant-Guides/static/css/main.cb16d8c7.chunk.css.map",
     "static/js/2.8f8b9409.chunk.js.LICENSE.txt": "/Valorant-Guides/static/js/2.8f8b9409.chunk.js.LICENSE.txt",
@@ -116,6 +116,6 @@
     "static/js/runtime-main.94b73081.js",
     "static/js/2.8f8b9409.chunk.js",
     "static/css/main.cb16d8c7.chunk.css",
-    "static/js/main.ff65731b.chunk.js"
+    "static/js/main.5da48b7e.chunk.js"
   ]
 }
